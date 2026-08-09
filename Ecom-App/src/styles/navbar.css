@@ -1,0 +1,146 @@
+.navbar {
+    width: 100%;
+    min-height: 84px;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: #D8E5F6;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
+}
+
+.navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.navbar-brand-logo {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.navbar-brand-text {
+    font-size: 1rem;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 0.96rem;
+    font-weight: 600;
+    font-family: "Roboto";
+    transition: 0.35s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    color: #fde68a;
+}
+
+.cart-link {
+    position: relative;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -10px;
+    right: -16px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #58c4f6;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border: 2px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav-select {
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 999px;
+    padding: 8px 12px;
+    min-width: 165px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.95);
+    color: #1f2937;
+}
+
+.nav-profile-link {
+    display: flex;
+    align-items: center;
+}
+
+.nav-profile-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fde68a;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 12px 16px;
+        justify-content: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .nav-profile-link {
+        margin-top: 4px;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar {
+        min-height: auto;
+    }
+
+    .navbar-brand {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-select {
+        min-width: 100%;
+    }
+}
+

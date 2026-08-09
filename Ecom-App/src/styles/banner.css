@@ -1,0 +1,66 @@
+.classBanner {
+  background-image: url("../assets/Shopping\ Cart\ Icon.jpg");
+
+  /* Keep image proportionate without stretching */
+  background-size: 370px;        /* 🔹 keeps original size */
+  background-position: center;     /* 🔹 centers image */
+  background-repeat:no-repeat ;  
+
+  /* Overlay for readability */
+  position: relative;
+  color: rgba(255, 255, 255, 0.897);
+
+
+  padding: 6rem 2rem;              /* adjust height if needed */
+  /* border-radius: 0.9ch; */
+  text-align: center;
+  /* margin: 1rem  ; */
+
+  /* box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35); */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  overflow: hidden;
+}
+
+/* Dark overlay */
+.classBanner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)
+  );
+  z-index: 0;
+}
+
+/* Make sure text/content is above overlay */
+.classBanner * {
+  position: relative;
+  z-index: 1;
+
+  
+}
+
+.classBanner p{
+  color: #58c4f6;
+  font-weight: 800;
+  font-family: Roboto;
+}
+.classBanner button{
+  background-color: #be185d;
+  color: whitesmoke;
+  width: 120px;
+  padding: 0.5rem;
+  border-radius: 1ch;
+  border: none;
+  margin-top:2rem;
+  font-weight: 600;
+}
+
+.classBanner button:hover{
+  color:#ffb703;
+}
+.classBanner h2{
+  font-family: Roboto;
+}

@@ -1,0 +1,375 @@
+/*style.css*/
+
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color:rgb(255, 255, 255);
+}
+
+
+
+.container{
+    width: 70%;
+    height: 100%;
+background-color: rgb(245, 243, 243);   
+
+
+
+}
+
+
+
+.header{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    width: 100%;
+    height: 10%;
+    background-color: white;
+    font-weight: 600; 
+}
+
+.logoclass{
+    width: 40px;
+    height: 15px;
+    margin-top: 16px;
+    margin-left: 10px;
+
+}
+
+.home{
+
+    margin-left: 50px;
+}
+
+hr{
+
+    margin-top: -2px;
+}
+
+.account{
+    margin-left: 280px;
+}
+.acc{
+    display: flex;
+}
+.drpdwnclass{
+    width: 20px;
+    height: 20px;
+    margin-top: 16px;
+
+}
+.lockclass{
+    width: 10px;
+    height: 15px;
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+.itemclass{
+    margin-left:150 ;
+    margin-top: 17px;
+}
+.myimage{
+    width:40px;
+    height: 40px;
+    border-radius: 2cm;
+align-self: center;
+}
+.accnt{
+    color: rgba(0, 110, 255, 0.89);
+}
+.section{
+    height:105% ;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+
+}
+.makeorder1{
+    display: flex;
+    column-gap: 10px;
+    margin-left: 15px;
+    font-size: 15px;
+}
+.accd{
+    margin-left: 15px;
+}
+.email{
+    margin-left: 15px;
+    color: blue;
+    font-size: 13px;
+   
+    }
+
+
+.paswd{
+    margin-left: 15px;
+    font-weight: 600;
+    font-size: 13px;
+}
+.makeorder{
+    height: 70%;
+    border-radius: 2ch;
+    width: 50%;
+    background-color:rgb(230, 229, 229);
+    margin-left: 20px;
+    font-family: Roboto;
+    .zero1{
+        width: 50px;
+        height: 15px;
+        margin-top: 20px;
+
+    }
+    h1{
+        margin-top: 60px;
+        margin-left: -300px;
+    }
+
+
+}
+.ordered{
+    height: 70%;
+    width: 50%;
+    background-color: rgb(230, 229, 229); 
+    border-radius: 2ch
+};
+
+
+input{
+    width: 300px;
+    height: 30px;
+    border-radius: 1ch;
+    border: none;
+    background-color: rgb(236, 236, 226);
+    margin-left: 30px;
+}
+.registration{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.regfor{
+    margin-left: 200px;
+}
+.registration2{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: -5px;
+    margin-left: 200px;
+}
+button{
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+    border-radius: 1ch;
+    border: none;
+    color: white;
+    background-color: #3678f3cb;
+}
+hr{
+    margin-top: 50px;
+}
+.btn2{
+    width: 120px;
+}
+.register{
+    font-size: 13px;
+}
+.ordered1{
+    font-family: Roboto;
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 20px;
+    img{
+        width: 230px;
+        height: 95px;
+    }
+
+p{
+    display: flex;
+    font-size: small;
+    font-weight: 400;
+}
+
+h1{
+    font-size: 15px;
+}
+
+[type="text"]{
+    width: 120px;
+    border: none;
+    border-radius: 0.5ch;
+    height: 25px;
+    margin-left: 2px;
+    background-color: rgb(196, 190, 190);
+}
+
+[type= "button"]{
+    width: 60px;
+    height: 25px;
+    font-weight: 600;
+    margin-left: 170px;
+    margin-top: -30px;
+    background-color: whitesmoke;
+    color:rgb(45, 42, 221);
+    border-color: hsl(231, 77%, 47%);
+     border-style:solid;
+     border-width: 0.2ch;
+     border-radius: 0.5ch;
+    
+    }
+.ksh{
+    font-weight:600;
+
+}
+.k1{
+    margin-left:165px;
+    margin-top: -175px;
+}
+.k2{
+    margin-left:165px ;
+}
+.k3{
+    margin-left: 203px;
+    color: #09b657a1;
+    font-weight: 600;
+}
+.k4{
+    margin-left: 170px;
+
+
+
+
+
+    /*style.css google mini-app*/
+
+
+
+
+body{
+    background-color:#D8E5F6;
+    width: 100vw;
+    height: 100vh;
+}
+.container{
+    display: flex;
+    height: 400px;
+    width: 280px;
+    background-color:#EAF0F9;
+    align-content: center;
+    border-radius: 4ch;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    
+
+}
+.googlelogo{
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    margin-left: 110px;
+    width: 60px;
+    background-color: transparent;
+    
+
+
+    
+}
+.surthar{
+    display: flex;
+    flex-direction:row;
+    margin-top: -25px;
+    column-gap: 3px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-family:Roboto Condensed;
+    font-size: 24px;
+    
+    
+ }
+
+    
+
+
+ .designer{
+    margin-top:-2px;
+    position: absolute;
+    opacity:0.5;
+    font-size: small;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-family: Roboto;
+
+    
+ }
+ 
+
+ .handles{
+
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    margin-top:55px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    
+
+
+    .fblogo{
+        width: 30px;
+        
+    }
+    .xlogo{
+        width: 30px;
+    }
+    .instalogo{
+        width: 30px;
+    }
+
+    }
+
+
+
+ .addme{
+    display: flex;
+    width:160px;
+    height:30px;
+    border-radius:4ch;
+    background-color: white;
+    text-align: center;
+    border-top: none;
+    border-left: none;
+    
+
+
+ }
+
+ [type="text"].addme{
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 50px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 2ch;
+    border-color:white;
+    opacity: 0.9;
+   
+ }

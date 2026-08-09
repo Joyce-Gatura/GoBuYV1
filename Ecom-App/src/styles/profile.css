@@ -1,0 +1,268 @@
+.profile-page {
+  min-height: 100vh;
+  color: #1f2937;
+}
+
+.profile-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+.profile-card {
+  background: whitesmoke;
+  border-radius: 24px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.profile-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.profile-user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.profile-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #be185d;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-heading h2 {
+  margin: 0 0 4px;
+  color: #be185d;
+}
+
+.profile-heading p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.edit-btn,
+.secondary-btn,
+.danger-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background: #be185d;
+  color: #fff;
+}
+
+.secondary-btn {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.danger-btn {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.section-card {
+  background: #fffafc;
+  border-radius: 18px;
+  padding: 20px;
+  border: 1px solid #f5dce7;
+}
+
+.section-card h3 {
+  margin-top: 0;
+  color: #be185d;
+}
+
+.info-list {
+  display: grid;
+  gap: 12px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f3d7e2;
+}
+
+.order-item {
+  padding: 12px 0;
+  border-bottom: 1px solid #f3d7e2;
+}
+
+.order-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.status-pending { background: #fef3c7; color: #92400e; }
+.status-shipped { background: #dbeafe; color: #1d4ed8; }
+.status-delivered { background: #dcfce7; color: #166534; }
+.status-cancelled { background: #fee2e2; color: #b91c1c; }
+
+.address-list {
+  display: grid;
+  gap: 10px;
+}
+
+.security-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.profile-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.edit-form {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.edit-form input,
+.password-form input {
+  border: 1px solid #f2c8d8;
+  border-radius: 10px;
+  padding: 10px 12px;
+  outline: none;
+  width: 100%;
+}
+
+.password-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid #f3d7e2;
+  border-radius: 16px;
+  background: #fffafc;
+}
+
+.password-form label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.password-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.delivery-track {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.track-step {
+  flex: 1;
+  min-width: 90px;
+  border-radius: 999px;
+  padding: 7px 10px;
+  text-align: center;
+  font-size: 12px;
+  background: #f3f4f6;
+  color: #6b7280;
+  font-weight: 700;
+}
+
+.track-step.active {
+  background: linear-gradient(135deg, #ec4899, #be185d);
+  color: white;
+}
+
+.empty-order,
+.profile-toast {
+  background: #fdf2f8;
+  border: 1px solid #f5cfe1;
+  border-radius: 12px;
+  padding: 12px 14px;
+  color: #9d174d;
+  margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-shell {
+    padding: 16px 12px 40px;
+  }
+
+  .profile-card {
+    padding: 18px;
+  }
+
+  .password-form-actions {
+    flex-direction: column;
+  }
+
+  .info-item,
+  .order-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}

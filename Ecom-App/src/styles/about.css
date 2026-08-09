@@ -1,0 +1,225 @@
+/* ===========================
+   GLOBAL
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    color: #333;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 40px 10%;
+}
+
+.about-page {
+    background: linear-gradient(180deg, #f8fafc 0%, #fff 100%);
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.heros {
+    min-height: 56vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/goby-logo.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #58c4f6;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+.heros h2 {
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    line-height: 1.5;
+    max-width: 760px;
+}
+
+/* ===========================
+   MISSION
+=========================== */
+
+.mission {
+    text-align: center;
+}
+
+.mission h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.mission p {
+    max-width: 900px;
+    margin: auto;
+    line-height: 2;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* ===========================
+   VALUES
+=========================== */
+
+.values {
+    text-align: center;
+}
+
+.values h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.values ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.values li {
+    background: linear-gradient(135deg, #0d6efd 0%, #2563eb 100%);
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.4s;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: whitesmoke;
+    border-radius: 16px;
+    animation: slideInUp 0.7s ease both;
+}
+
+.values li:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.values li:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.values li:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.values li:hover {
+    transform: translateY(-10px);
+    background: whitesmoke;
+    color: black;
+}
+
+/* ===========================
+   PRODUCTS
+=========================== */
+
+.our-products {
+    text-align: center;
+}
+
+.our-products h2 {
+    color: #333;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+}
+
+.modern img,
+.beauty img,
+.home img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.modern h3,
+.beauty h3,
+.home h3 {
+    margin: 25px 0 15px;
+    font-size: 1.5rem;
+    color: #666;
+}
+
+button {
+    border: none;
+    border-radius: 999px;
+    background: #be185d;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+    padding: 0.75rem 1.15rem;
+    width: 120px;
+}
+
+button:hover {
+    background: #084298;
+    transform: scale(1.08);
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 992px) {
+    .heros h2 {
+        width: 90%;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 60px 8%;
+    }
+
+    .heros {
+        min-height: 65vh;
+    }
+
+    .mission h2,
+    .values h2,
+    .our-products h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .categories {
+        grid-template-columns: 1fr;
+    }
+
+    .modern img,
+    .beauty img,
+    .home img {
+        height: 220px;
+    }
+}
