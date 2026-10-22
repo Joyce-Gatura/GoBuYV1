@@ -1,75 +1,142 @@
+
+
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import CartContext from "../UseContext/CartContext";
 import NavBar from "../ReUsables/NavBar";
-
+import { useInventory } from "../UseContext/InventoryContext";
+import Footer from "../ReUsables/Footer";
+import "../styles/cart.css";
+import shoppingct from "../assets/shoppingct.png";
 const Cart = () => {
   const navigate = useNavigate();
-  const { cartItems, increaseQuantity, decreaseQuantity, removeFromCart, totalPrice } =
-    useContext(CartContext);
+
+  const {
+    cartItems,
+    totalPrice,
+    increaseQuantity,
+    decreaseQuantity,
+    removeFromCart,
+  } = useContext(CartContext);
+  const { getStock } = useInventory();
 
   return (
-
-
-    
     <div className="cart-page">
-        <NavBar/>
 
-      
-      <div className="cart-card">
+      <NavBar />
 
-      
-        <div className="cart-header">
-          <h2>Shopping Cart</h2>
-          <p>{cartItems.length} item{cartItems.length === 1 ? "" : "s"}</p>
-        </div>
+      <main className="cart-card">
 
+        {/* EMPTY CART */}
         {cartItems.length === 0 ? (
+
           <div className="empty-cart">
-            <h3>Your cart is empty.</h3>
-          </div>
-        ) : (
-          <>
-            <div className="cart-items">
-              {cartItems.map((item) => (
-                <div className="cart-item" key={item.id}>
-                  <img src={item.img || item.image} alt={item.name} />
 
-                  <div className="cart-item-details">
-                    <h3>{item.name}</h3>
-                    {/* <p>Ksh {item.price.toLocaleString()}</p> */}
-                  </div>
+            <div className="cart-header">
 
-                  <div className="cart-quantity-controls">
-                    <button onClick={() => decreaseQuantity(item.id)}>-</button>
-                    <span>{item.quantity}</span>
-                    <button onClick={() => increaseQuantity(item.id)}>+</button>
-                  </div>
+              <img src={shoppingct} alt="Shopping Cart" />
 
-                  <div className="cart-item-actions">
-                    <p className="cart-item-total">Ksh {(item.price * item.quantity).toLocaleString()}</p>
-                    <button className="remove-btn" onClick={() => removeFromCart(item.id)}>
-                      Remove
-                    </button>
-                  </div>
-                </div>
-              ))}
+              {/* <h3> */}
+              {/* Your Cart has {cartItems.length}{" "}
+                item{cartItems.length === 1 ? "" : "s"}!
+              </h3> */}
             </div>
+
+            <h3>
+              Looks like you haven't added anything
+              yet.
+            </h3>
+
+            <p>Click Shop Now to continue shopping.</p>
+
+            <button
+              className="shop-now-btn"
+              onClick={() => navigate("/allproductspage")}
+            >
+              Shop Now
+            </button>
+
+          </div>
+
+        ) : (
+
+          <>
+            {/* CART PRODUCTS */}
+
+            <h3 className="h3">Added Items:</h3>
+
+            <div className="cart-products" aria-label="Cart items">
+              
+
+              {cartItems.map((item) => (
+
+                <article key={item.id} className="cart-item">
+                  <img src={item.img || item.image || item.picture_url} alt={item.name} className="cart-item-image" />
+                  <div className="cart-item-details">
+                    <h4>{item.name}</h4>
+                    {/* <p className="cart-item-price">@ Ksh {Number(item.price).toLocaleString()}</p> */}
+                  </div>
+                  <div className="cart-item-actions">
+                    <div className="quantity-controls">
+                      <button className="quantity-btn" onClick={() => decreaseQuantity(item.id)} aria-label={`Decrease ${item.name} quantity`}>-</button>
+                      <span className="quantity">{item.quantity}</span>
+                      <button className="quantity-btn" onClick={() => increaseQuantity(item.id)} disabled={item.quantity >= getStock(item)} aria-label={`Increase ${item.name} quantity`}>+</button>
+                    </div>
+                    <strong className="item-price"> Ksh {(Number(item.price) * item.quantity).toLocaleString()}</strong>
+                    <button className="remove-btn" onClick={() => removeFromCart(item.id)}>Remove</button>
+                  </div>
+                </article>
+
+              ))}
+
+            </div>
+
+
+            {/* CART SUMMARY */}
 
             <div className="cart-summary">
-              <div>
-                <h3>Subtotal</h3>
-              </div>
+
+              <div><h4>Total: Ksh {totalPrice.toLocaleString()}</h4></div>
+
               <div className="cart-summary-actions">
-                <h2>Ksh {totalPrice.toLocaleString()}</h2>
-                <button className="checkout-btn" onClick={() => navigate("/checkout")}>
+
+                <button
+                  className="checkout-btn"
+                  onClick={() => navigate("/checkout")}
+                >
                   Checkout
                 </button>
+
               </div>
+
+
+
             </div>
+
           </>
+
+
+
         )}
-      </div>
+
+        <h2 className="h2">Recently Viewed Products</h2>
+
+
+        {/* <div className="recently-viewed">
+
+
+            {allproducts.map((product) => (
+            <ProductBox key={product.id} product={product} />
+          ))}
+
+
+
+
+        </div> */}
+
+      </main>
+      <Footer />
+
     </div>
   );
 };

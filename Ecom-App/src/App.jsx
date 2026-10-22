@@ -6,10 +6,13 @@ import AllProductsPage from "./EcomPages/AllProductsPage";
 import About from "./EcomPages/About";
 import Cart from "./Components/Cart";
 import Contact from "./EcomPages/Contact";
-import "./app.css";
+import "./App.css";
 import CheckOutPage from "./EcomPages/CheckOutPage";
 import Profile from "./Components/Profile";
+import ProductDetails from "./EcomPages/ProductDetails";
+import "./app.css"
 import { ProductFilterProvider } from "./UseContext/ProductFilterContext";
+import AddProduct from "./EcomPages/AddProduct";
 
 const App = () => {
   return (
@@ -27,6 +30,8 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/checkout" element={<CheckOutPage />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/products/:productId" element={<ProductDetails />} />
+            <Route path="/addproduct" element={<AddProduct />} />
           </Routes>
         </ProductFilterProvider>
       </Router>

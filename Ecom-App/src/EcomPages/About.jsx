@@ -2,9 +2,7 @@ import { useNavigate } from "react-router-dom";
 import NavBar from "../ReUsables/NavBar";
 import Footer from "../ReUsables/Footer";
 import "../styles/about.css";
-import Laptop2 from "../assets/laptop2.jpg";
-import duvet1 from "../assets/duvet1.jpg";
-import jewerly1 from "../assets/jewerly1.jpg";
+
 import { useProductFilters } from "../UseContext/ProductFilterContext";
 
 const About = () => {
@@ -39,7 +37,7 @@ const About = () => {
           <li>High-quality products from trusted suppliers</li>
           <li>Affordable pricing for all budgets</li>
           <li>Easy online shopping and fast checkout</li>
-          <li>Dedicated customer support whenever you need it</li>
+          <li>Dedicated customer support</li>
         </ul>
       </section>
 
@@ -49,19 +47,19 @@ const About = () => {
         <div className="categories">
           <div className="modern">
             <h3>Computer Accessories</h3>
-            <img src={Laptop2} alt="Computer accessories" />
+            {/* <img src={ca3} alt="Computer accessories" /> */}
             <button type="button" onClick={() => handleExplore("Tech-Gudgets")}>Explore</button>
           </div>
 
           <div className="beauty">
             <h3>Beauty & Selfcare</h3>
-            <img src={jewerly1} alt="Beauty and self-care products" />
+            {/* <img src={beut7} alt="Beauty and self-care products" /> */}
             <button type="button" onClick={() => handleExplore("Beauty & Selfcare")}>Explore</button>
           </div>
 
           <div className="home">
             <h3>Home Decors</h3>
-            <img src={duvet1} alt="Home decor products" />
+            {/* <img src={duvet4} alt="Home decor products" /> */}
             <button type="button" onClick={() => handleExplore("Home-Decor")}>Explore</button>
           </div>
         </div>

@@ -1,4 +1,61 @@
 
-.page{
-    background-color:  #D8E5F6;
+
+
+*{
+    font-family: 'Roboto';
+    padding: 0;
+  margin: 0;
+}
+
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+#root,
+.home-page,
+.about-page,
+.all-products-page,
+.checkout-page,
+.contact-page,
+.cart-page,
+.profile-page,
+.product-details-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+button{
+background-color:#EA580C;
+    /* background-color:#58c4f6; */
+
+  color:white;
+  
+  width: 180px;
+  height: 35px;
+  padding: 0.5rem;
+  border-radius:1ch;
+  border: none;
+cursor:pointer;
+
+  font-weight: 650;
+}
+button:hover{
+    color:black;
+    font-weight: 650;
+
+    /* background-color:#58c4f6; */
+
+
 }

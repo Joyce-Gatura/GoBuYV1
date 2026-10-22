@@ -1,225 +1,251 @@
-/* ===========================
-   GLOBAL
-=========================== */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
+ 
 
-body {
-    color: #333;
-    overflow-x: hidden;
-}
 
-section {
-    padding: 40px 10%;
-}
+
+ /* ================================
+   ABOUT PAGE
+================================ */
 
 .about-page {
-    background: linear-gradient(180deg, #f8fafc 0%, #fff 100%);
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f6f8;
+  color: #1f2937;
+  font-family: "Roboto";
 }
 
-/* ===========================
+/* ================================
    HERO SECTION
-=========================== */
+================================ */
 
 .heros {
-    min-height: 56vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/goby-logo.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    color: #58c4f6;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  background:
+    linear-gradient(
+      rgba(17, 24, 39, 0.5),
+      rgba(17, 24, 39, 0.3)
+    ),
+    
+    url("../assets/shopping\ img1.jpg") center/contain no-repeat ;
+    background-size:1300px auto;
 }
 
 .heros h2 {
-    font-size: clamp(1.4rem, 3vw, 2.2rem);
-    line-height: 1.5;
-    max-width: 760px;
+  max-width: 850px;
+  margin: 0;
+  color:white;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
 }
 
-/* ===========================
-   MISSION
-=========================== */
+/* ================================
+   MISSION & VALUES
+================================ */
 
-.mission {
-    text-align: center;
+.mission,
+.values {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 70px 25px;
+  text-align: center;
 }
 
-.mission h2 {
-    color: #333;
-    margin-bottom: 10px;
+.mission h2,
+.values h2,
+.our-products h2 {
+  color: #111827;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: -30px;
+}
+
+.mission h2::after,
+.values h2::after,
+.our-products h2::after {
+  content: "";
+  display: block;
+  width: 250px;
+  height: 3px;
+  margin: 5px auto 0;
+  background: #EA580C;
+  border-radius: 3px;
 }
 
 .mission p {
-    max-width: 900px;
-    margin: auto;
-    line-height: 2;
-    font-size: 1.1rem;
-    color: #666;
+  max-width: 850px;
+  margin: 0 auto;
+  color: #5b6472;
+  font-size: 1.25rem;
+  line-height: 1.8;
 }
 
-/* ===========================
+/* ================================
    VALUES
-=========================== */
+================================ */
 
 .values {
-    text-align: center;
-}
-
-.values h2 {
-    color: #333;
-    margin-bottom: 10px;
+  max-width: 100%;
+  background:rgb(230, 229, 229);
 }
 
 .values ul {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+      /* background:rgb(230, 229, 229); */
+
+  max-width: 850px;
+  margin: 20px auto 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  list-style: none;
 }
 
 .values li {
-    background: linear-gradient(135deg, #0d6efd 0%, #2563eb 100%);
-    padding: 30px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-    transition: 0.4s;
-    font-size: 1.05rem;
-    font-weight: 500;
-    color: whitesmoke;
-    border-radius: 16px;
-    animation: slideInUp 0.7s ease both;
-}
 
-.values li:nth-child(2) {
-    animation-delay: 0.1s;
-}
 
-.values li:nth-child(3) {
-    animation-delay: 0.2s;
-}
-
-.values li:nth-child(4) {
-    animation-delay: 0.3s;
+  
+  padding: 20px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  /* border-radius: 1ch; */
+  color: #4b5563;
+  font-size: 1.25rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .values li:hover {
-    transform: translateY(-10px);
-    background: whitesmoke;
-    color: black;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
 }
 
-/* ===========================
-   PRODUCTS
-=========================== */
+/* ================================
+   OUR PRODUCTS
+================================ */
 
 .our-products {
-    text-align: center;
-}
-
-.our-products h2 {
-    color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 75px 25px;
+  text-align: center;
 }
 
 .categories {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 35px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 20px;
 }
 
-.modern img,
-.beauty img,
-.home img {
+/* ================================
+   CATEGORY CARDS
+================================ */
+
+.categories > div {
+    width: 300px;
+
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.categories > div:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
+}
+
+.categories h3 {
+  margin: 0;
+  padding: 22px 15px 15px;
+  color: #1f2937;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+
+
+/* ================================
+   EXPLORE BUTTON
+================================ */
+
+.categories button {
+  margin: 20px 0 25px;
+  padding: 11px 28px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  /* border-radius: 1ch; */
+  color: #ffffff;
+  /* font-size: 0.95rem; */
+  /* font-weight: 650; */
+  cursor: pointer;
+  /* transition: */
+    /* background 0.25s ease, */
+    /* transform 0.25s ease; */
+};
+
+
+
+
+.categories button:active {
+  transform: translateY(0);
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 900px) {
+  .categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .categories > div:last-child {
+    grid-column: 1 / -1;
+    max-width: 500px;
     width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 16px;
+    margin: 0 auto;
+  }
 }
 
-.modern h3,
-.beauty h3,
-.home h3 {
-    margin: 25px 0 15px;
-    font-size: 1.5rem;
-    color: #666;
-}
+@media (max-width: 650px) {
+  .heros {
+    min-height: 35vh;
+    padding: 45px 20px;
+  }
 
-button {
-    border: none;
-    border-radius: 999px;
-    background: #be185d;
-    color: white;
-    cursor: pointer;
-    transition: 0.4s;
-    padding: 0.75rem 1.15rem;
-    width: 120px;
-}
+  .mission,
+  .values,
+  .our-products {
+    padding: 55px 20px;
+  }
 
-button:hover {
-    background: #084298;
-    transform: scale(1.08);
-}
+  .values ul {
+    grid-template-columns: 1fr;
+  }
 
-/* ===========================
-   ANIMATIONS
-=========================== */
+  .categories {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
 
-@keyframes slideInUp {
-    from {
-        opacity: 0;
-        transform: translateY(24px);
-    }
+  .categories > div:last-child {
+    max-width: none;
+  }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ===========================
-   RESPONSIVE
-=========================== */
-
-@media (max-width: 992px) {
-    .heros h2 {
-        width: 90%;
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    section {
-        padding: 60px 8%;
-    }
-
-    .heros {
-        min-height: 65vh;
-    }
-
-    .mission h2,
-    .values h2,
-    .our-products h2 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 500px) {
-    .categories {
-        grid-template-columns: 1fr;
-    }
-
-    .modern img,
-    .beauty img,
-    .home img {
-        height: 220px;
-    }
+  .categories img {
+    height: 220px;
+  }
 }

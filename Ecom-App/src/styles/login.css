@@ -1,0 +1,224 @@
+.Loginpage {
+  --auth-pink: #EA580C;
+  --auth-indigo: #6774f6;
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 40px 20px;
+  background:
+    radial-gradient(ellipse at 12% 12%, rgba(103, 116, 246, 0.12), transparent 34%),
+    radial-gradient(ellipse at 90% 88%, rgba(190, 24, 93, 0.1), transparent 35%),
+    #f6f7fb;
+}
+
+.login-card {
+  display: grid;
+  /* grid-template-columns: minmax(250px, 0.85fr) minmax(360px, 1.15fr); */
+  width: min(500px, 100%);
+  min-height: 300px;
+  overflow: hidden;
+  border: 1px solid rgba(31, 41, 55, 0.07);
+  /* border-radius: 26px; */
+  background: #fff;
+  box-shadow: 0 24px 70px rgba(31, 41, 55, 0.13);
+}
+/* 
+.login-image {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 100%;
+  padding: 36px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.45) 0 2px, transparent 3px) 0 0 / 26px 26px,
+    linear-gradient(145deg, rgba(103, 116, 246, 0.96), rgba(190, 24, 93, 0.95));
+} */
+/* 
+.login-image::after {
+  position: absolute;
+  right: -100px;
+  top: 70px;
+  width: 290px;
+  height: 290px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 35px rgba(255, 255, 255, 0.07),
+    0 0 0 70px rgba(255, 255, 255, 0.05);
+  content: "";
+} */
+
+.login-form-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 64px clamp(32px, 7vw, 76px);
+}
+
+.Login-form {
+  margin: 0 0 10px;
+  color: #697386;
+  font-size: 0.94rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.login-form-panel > .Register-link {
+  margin: 0 0 30px;
+  color: #171923;
+  font-size: clamp(1.85rem, 4vw, 2.25rem);
+  font-weight: 750;
+  letter-spacing: -0.04em;
+}
+
+.login-form {
+  display: grid;
+  gap: 20px;
+  width: 100%;
+}
+
+.login-field {
+  display: grid;
+  gap: 8px;
+}
+
+.login-field label {
+  color: #374151;
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.login-form input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 35px;
+  padding: 12px 14px;
+  border: 1px solid #d9deea;
+  outline: none;
+  background: #fff;
+  color: #1f2937;
+  font: inherit;
+  font-size: 0.95rem;
+  transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.login-form input::placeholder {
+  color: #9aa2b1;
+}
+
+.login-form input:hover {
+  border-color: #aab2c4;
+}
+
+.login-form input:focus-visible {
+  border-color: var(--auth-indigo);
+  box-shadow: 0 0 0 4px rgba(103, 116, 246, 0.15);
+}
+
+
+.Loginpage .error-message,
+.Loginpage .success-message {
+  margin: 0;
+  padding: 11px 13px;
+  border-radius: 9px;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.Loginpage .error-message {
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  color: #b42318;
+}
+
+.Loginpage .success-message {
+  border: 1px solid #bbf7d0;
+  background: #f0fdf4;
+  color: #15803d;
+}
+
+.login-form-panel > .Register-link:last-child {
+  margin-top: 26px;
+  color: #697386;
+  font-size: 0.92rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.login-form-panel > .Register-link:last-child h4 {
+  margin: 0;
+  font: inherit;
+}
+
+.Loginpage a {
+  color: var(--auth-pink);
+  font-weight: 700;
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+
+.Loginpage a:hover {
+  color: #EA580C;
+  text-decoration: underline;
+}
+
+.Loginpage a:focus-visible {
+  border-radius: 3px;
+  outline: 3px solid rgba(103, 116, 246, 0.6);
+  outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+  .Loginpage {
+    padding: 24px 16px;
+  }
+
+  .login-card {
+    grid-template-columns: 1fr;
+    width: min(480px, 100%);
+    min-height: 0;
+    /* border-radius: 20px; */
+  }
+
+  /* .login-image {
+    min-height: 96px;
+    padding: 0;
+  } */
+
+  .login-image::after {
+    top: -150px;
+    right: 30px;
+    width: 240px;
+    height: 240px;
+  }
+
+  .login-form-panel {
+    padding: 34px clamp(22px, 7vw, 36px) 38px;
+  }
+
+  .login-form-panel > .Register-link {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 380px) {
+  .Loginpage {
+    padding: 14px 10px;
+  }
+
+  .login-card {
+    border-radius: 16px;
+  }
+
+  .login-form-panel {
+    padding: 28px 20px 30px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .login-form input,
+  .login-form button[type="submit"] {
+    transition: none;
+  }
+}

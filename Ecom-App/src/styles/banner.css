@@ -1,4 +1,6 @@
 .classBanner {
+  margin: 5px;
+  margin-top: 0px;
   background-image: url("../assets/Shopping\ Cart\ Icon.jpg");
 
   /* Keep image proportionate without stretching */
@@ -12,7 +14,7 @@
 
 
   padding: 6rem 2rem;              /* adjust height if needed */
-  /* border-radius: 0.9ch; */
+  /* border-radius: 1ch; */
   text-align: center;
   /* margin: 1rem  ; */
 
@@ -28,8 +30,8 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.6)
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
   );
   z-index: 0;
 }
@@ -43,24 +45,17 @@
 }
 
 .classBanner p{
-  color: #58c4f6;
+  /* color:black; ; */
   font-weight: 800;
   font-family: Roboto;
 }
 .classBanner button{
-  background-color: #be185d;
-  color: whitesmoke;
-  width: 120px;
-  padding: 0.5rem;
-  border-radius: 1ch;
+
+ 
   border: none;
   margin-top:2rem;
   font-weight: 600;
 }
 
-.classBanner button:hover{
-  color:#ffb703;
-}
-.classBanner h2{
-  font-family: Roboto;
-}
+
+

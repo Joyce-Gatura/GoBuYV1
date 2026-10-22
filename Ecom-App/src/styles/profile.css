@@ -6,14 +6,15 @@
 .profile-shell {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 32px 20px 60px;
+  /* padding: 32px 20px 60px; */
 }
 
 .profile-card {
   background: whitesmoke;
-  border-radius: 24px;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+  /* border-radius: 24px; */
+  /* box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08); */
   padding: 28px;
+  width: 100%;
   margin-bottom: 24px;
 }
 
@@ -35,7 +36,7 @@
   height: 72px;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid #be185d;
+  border: 3px solid #EA580C;
 }
 
 .profile-avatar img {
@@ -46,33 +47,26 @@
 
 .profile-heading h2 {
   margin: 0 0 4px;
-  color: #be185d;
 }
 
 .profile-heading p {
   margin: 0;
-  color: #6b7280;
+  color: blue;
 }
+
+
 
 .edit-btn,
 .secondary-btn,
 .danger-btn {
   border: none;
-  border-radius: 999px;
   padding: 10px 16px;
   font-weight: 600;
   cursor: pointer;
 }
 
-.edit-btn {
-  background: #be185d;
-  color: #fff;
-}
 
-.secondary-btn {
-  background: #f3f4f6;
-  color: #374151;
-}
+
 
 .danger-btn {
   background: #fee2e2;
@@ -88,14 +82,13 @@
 
 .section-card {
   background: #fffafc;
-  border-radius: 18px;
+  /* border-radius: 18px; */
   padding: 20px;
-  border: 1px solid #f5dce7;
+  /* border: 1px solid black; */
 }
 
 .section-card h3 {
   margin-top: 0;
-  color: #be185d;
 }
 
 .info-list {
@@ -113,8 +106,9 @@
 
 .order-item {
   padding: 12px 0;
-  border-bottom: 1px solid #f3d7e2;
+  border-bottom: 5px solid #f3d7e2;
 }
+
 
 .order-meta {
   display: flex;
@@ -134,7 +128,7 @@
   text-transform: capitalize;
 }
 
-.status-pending { background: #fef3c7; color: #92400e; }
+.status-pending { background: #58c4f6; color: white; }
 .status-shipped { background: #dbeafe; color: #1d4ed8; }
 .status-delivered { background: #dcfce7; color: #166534; }
 .status-cancelled { background: #fee2e2; color: #b91c1c; }
@@ -166,11 +160,11 @@
 
 .edit-form input,
 .password-form input {
-  border: 1px solid #f2c8d8;
-  border-radius: 10px;
+  border: 1px solid grey;
+  /* border-radius: 10px; */
   padding: 10px 12px;
   outline: none;
-  width: 100%;
+  width: 50%;
 }
 
 .password-form {
@@ -178,7 +172,7 @@
   gap: 12px;
   margin-top: 16px;
   padding: 16px;
-  border: 1px solid #f3d7e2;
+  border: 1px solid grey;
   border-radius: 16px;
   background: #fffafc;
 }
@@ -187,7 +181,7 @@
   display: grid;
   gap: 6px;
   font-weight: 600;
-  color: #4b5563;
+  color: black;
 }
 
 .password-form-actions {
@@ -195,6 +189,10 @@
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 4px;
+}
+.order-product img{
+  width:150px;
+
 }
 
 .delivery-track {
@@ -207,7 +205,7 @@
 .track-step {
   flex: 1;
   min-width: 90px;
-  border-radius: 999px;
+  border-radius:1ch;
   padding: 7px 10px;
   text-align: center;
   font-size: 12px;
@@ -221,14 +219,70 @@
   color: white;
 }
 
-.empty-order,
-.profile-toast {
-  background: #fdf2f8;
+.empty-order {
+  background: white;
   border: 1px solid #f5cfe1;
   border-radius: 12px;
   padding: 12px 14px;
-  color: #9d174d;
+  color: #374151;
   margin-top: 10px;
+}
+
+.profile-toast {
+  position: fixed;
+  z-index: 1100;
+  top: 16px;
+  left: 50%;
+  width: max-content;
+  max-width: min(560px, calc(100vw - 32px));
+  padding: 14px 20px 14px 24px;
+  transform: translateX(-50%);
+  /* border: 1px solid #f3b9d3; */
+  /* border-radius: 14px; */
+  background: #fff;
+  box-shadow: 0 14px 38px rgba(31, 41, 55, 0.18);
+  color: green;
+  font-size: 0.95rem;
+  font-weight: 600;
+  /* line-height: 1.45; */
+  overflow-wrap: anywhere;
+  animation: profile-toast-enter 220ms ease-out both;
+}
+
+.profile-toast::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  /* width: 5px; */
+  /* border-radius: 14px 0 0 14px; */
+  background: linear-gradient(180deg, #ec4899, #be185d);
+  content: "";
+}
+
+@keyframes profile-toast-enter {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-toast {
+    top: 12px;
+    max-width: calc(100vw - 24px);
+    padding: 12px 16px 12px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-toast {
+    animation: none;
+  }
 }
 
 @media (max-width: 900px) {
