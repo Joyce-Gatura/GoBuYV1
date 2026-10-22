@@ -10,7 +10,7 @@ import "./App.css";
 import CheckOutPage from "./EcomPages/CheckOutPage";
 import Profile from "./Components/Profile";
 import ProductDetails from "./EcomPages/ProductDetails";
-import "./app.css"
+import "./App.css"
 import { ProductFilterProvider } from "./UseContext/ProductFilterContext";
 import AddProduct from "./EcomPages/AddProduct";
 
