@@ -1,8 +1,8 @@
-import ca1 from "../Assets/ca1.jpg"
-import ca2 from "../Assets/ca2.jpg"
-import ca3 from "../Assets/ca3.jpg"
-import ca4 from "../Assets/ca4.jpg"
-import ca5 from "../Assets/ca5.jpg"
+// import ca1 from "../Assets/ca1.jpg"
+// import ca2 from "../Assets/ca2.jpg"
+// import ca3 from "../Assets/ca3.jpg"
+// import ca4 from "../Assets/ca4.jpg"
+// import ca5 from "../Assets/ca5.jpg"
 import ca6 from "../Assets/ca6.jpg"
 import ca7 from "../Assets/ca7.jpg"
 import ca8 from "../Assets/ca8.jpg"
@@ -78,14 +78,14 @@ const computer=[
         category: "Tech-Gudgets",
 
     },
-    {
-        id:1,
-        img:ca1,
-        name:"computer",
-        price:30000,
-        category: "Tech-Gudgets",
+    // {
+    //     id:1,
+    //     img:ca1,
+    //     name:"computer",
+    //     price:30000,
+    //     category: "Tech-Gudgets",
 
-    },
+    // },
 
     {
         id:1,
@@ -145,37 +145,37 @@ const computer=[
         category: "Tech-Gudgets",
 
     },
-      {
-        id:1,
-        img:ca2,
-        name:"computer",
-        price:30000,
-        category: "Tech-Gudgets",
+    //   {
+    //     id:1,
+    //     img:ca2,
+    //     name:"computer",
+    //     price:30000,
+    //     category: "Tech-Gudgets",
 
-    },
-      {
-        id:1,
-        img:ca3,
-        name:"computer",
-        price:30000,
-        category: "Tech-Gudgets",
+    // },
+    //   {
+    //     id:1,
+    //     img:ca3,
+    //     name:"computer",
+    //     price:30000,
+    //     category: "Tech-Gudgets",
 
-    },
-      {
-        id:1,
-        img:ca4,
-        name:"computer",
-        price:30000,
-        category: "Tech-Gudgets",
+    // },
+      // {
+    //     id:1,
+    //     img:ca4,
+    //     name:"computer",
+    //     price:30000,
+    //     category: "Tech-Gudgets",
 
-    },  {
-        id:1,
-        img:ca5,
-        name:"computer",
-        price:30000,
-        category: "Tech-Gudgets",
+    // },  {
+    //     id:1,
+    //     img:ca5,
+    //     name:"computer",
+    //     price:30000,
+    //     category: "Tech-Gudgets",
 
-    },
+    // },
       {
         id:1,
         img:ca6,
