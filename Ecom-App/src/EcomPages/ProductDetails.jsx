@@ -5,14 +5,14 @@ import { useInventory } from "../UseContext/InventoryContext";
 import { useToast } from "../UseContext/ToastContext";
 import NavBar from "../ReUsables/NavBar";
 import Footer from "../ReUsables/Footer";
-import homeproducts from "../ProductsData/HomeDecor";
-import computer from "../ProductsData/Computer";
-import Beauty from "../ProductsData/Beauty";
+// import homeproducts from "../ProductsData/HomeDecor";
+// import computer from "../ProductsData/Computer";
+// import Beauty from "../ProductsData/Beauty";
 import "../styles/productdetails.css";
 
 const ProductDetails = () => {
   const { productId } = useParams();
-  const product = [...homeproducts, ...computer, ...Beauty].find((item) => item.id === productId);
+  const product = [].find((item) => item.id === productId);
   const { cartItems, addToCart } = useContext(CartContext);
   const { getStock } = useInventory();
   const { showToast } = useToast();
