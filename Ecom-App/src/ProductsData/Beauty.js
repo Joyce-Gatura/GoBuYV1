@@ -1,10 +1,10 @@
 
-import beuty1 from "../Assets/beuty1.jpg";
-import beut2 from "../Assets/beut2.jpg";
-import beut3 from "../Assets/beut3.jpg";
+// import beuty1 from "../Assets/beuty1.jpg";
+// import beut2 from "../Assets/beut2.jpg";
+// import beut3 from "../Assets/beut3.jpg";
 // import beut4 from "../Assets/beut4.jpg";
-import beut5 from "../Assets/beut5.jpg";
-import beut6 from "../Assets/beut6.jpg";
+// import beut5 from "../Assets/beut5.jpg";
+// import beut6 from "../Assets/beut6.jpg";
 import beut7 from "../Assets/beut7.jpg";
 import beut8 from "../Assets/beut8.jpg";
 import beut9 from "../Assets/beut9.jpg";
@@ -44,48 +44,49 @@ const beauty=[
 
     },
   
-        {
+    //     {
 
-        id:201,
-        img:beut2,
-        name:"Beauty",
-        price:500,
-        category:"Beauty & Selfcare"
+    //     id:201,
+    //     img:beut2,
+    //     name:"Beauty",
+    //     price:500,
+    //     category:"Beauty & Selfcare"
 
-    },
-        {
+    // },
+    //     {
 
-        id:201,
-        img:beut3,
-        name:"Beauty",
-        price:500,
-        category:"Beauty & Selfcare"
+    //     id:201,
+    //     img:beut3,
+    //     name:"Beauty",
+    //     price:500,
+    //     category:"Beauty & Selfcare"
 
-    }, 
+    // }, 
 
 
 
        
     
-    {
+    // {
 
-        id:201,
-        img:beut5,
-        name:"Beauty",
-        price:500,
-        category:"Beauty & Selfcare"
+    //     id:201,
+    //     img:beut5,
+    //     name:"Beauty",
+    //     price:500,
+    //     category:"Beauty & Selfcare"
 
-    },   
+    // },   
     
-    {
+    // {
 
-        id:201,
-        img:beut6,
-        name:"Beauty",
-        price:500,
-        category:"Beauty & Selfcare"
+    //     id:201,
+    //     img:beut6,
+    //     name:"Beauty",
+    //     price:500,
+    //     category:"Beauty & Selfcare"
 
-    },    {
+    // },  
+      {
 
         id:201,
         img:beut7,
@@ -107,15 +108,15 @@ const beauty=[
 
 
 
-      {
+    //   {
 
-        id:201,
-        img:beuty1,
-        name:"Beauty",
-        price:500,
-        category:"Beauty & Selfcare"
+    //     id:201,
+    //     img:beuty1,
+    //     name:"Beauty",
+    //     price:500,
+    //     category:"Beauty & Selfcare"
 
-    },
+    // },
         {
 
         id:201,
