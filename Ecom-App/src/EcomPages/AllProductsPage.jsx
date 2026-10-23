@@ -6,6 +6,9 @@ import Footer from "../ReUsables/Footer";
 import ProductBox from "../Components/ProductBox";
 import "../styles/allproductspage.css";
 import { useProductFilters } from "../UseContext/ProductFilterContext";
+const API_URL = (
+  import.meta.env.VITE_API_URL || "http://localhost:5000"
+).replace(/\/+$/, "");
 
 const AllProductsPage = () => {
   const { filters } = useProductFilters();
@@ -18,7 +21,7 @@ const AllProductsPage = () => {
     const fetchProducts = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/products"
+          `${API_URL}/api/products`
         );
 
         const data = await response.json();

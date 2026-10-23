@@ -3,6 +3,9 @@
 import { useState } from "react";
 import NavBar from "../ReUsables/NavBar";
 import "../styles/addProduct.css";
+const API_URL = (
+  import.meta.env.VITE_API_URL || "http://localhost:5000"
+).replace(/\/+$/, "");
 
 const initialFormData = {
   name: "",
@@ -39,7 +42,7 @@ const AddProduct = () => {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:5000/api/products",
+        `${API_URL}/api/products`,
         {
           method: "POST",
           headers: {

@@ -5,6 +5,9 @@ import Footer from "../ReUsables/Footer";
 import "../styles/profile.css";
 import avatar from "../assets/shop with me.jpg";
 import { logoutUser } from "../services/api.js";
+const API_URL = (
+  import.meta.env.VITE_API_URL || "http://localhost:5000"
+).replace(/\/+$/, "");
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -58,7 +61,7 @@ useEffect(() => {
       }
 
       const response = await fetch(
-        "http://localhost:5000/api/orders/my-orders",
+        `${API_URL}/api/orders/my-orders`,
         {
           method: "GET",
           headers: {
@@ -165,7 +168,7 @@ const handlePasswordSave = async (event) => {
   try {
     // 5. Send password change request to backend
     const response = await fetch(
-      "http://localhost:5000/api/auth/change-password",
+      `${API_URL}/api/auth/change-password`,
       {
         method: "POST",
 
@@ -250,7 +253,7 @@ const handlePasswordSave = async (event) => {
         return;
       }
 
-      const response = await fetch("http://localhost:5000/api/auth/delete-account", {
+      const response = await fetch(`${API_URL}/api/auth/delete-account`, {
         method: "DELETE",
         headers: {
           "Authorization": `Bearer ${token}`

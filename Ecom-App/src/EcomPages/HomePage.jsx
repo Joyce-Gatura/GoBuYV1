@@ -5,6 +5,9 @@ import NavBar from "../ReUsables/NavBar";
 import Footer from "../ReUsables/Footer";
 import Banner from "../ReUsables/Banner";
 import ProductBox from "../Components/ProductBox";
+const API_URL = (
+  import.meta.env.VITE_API_URL || "http://localhost:5000"
+).replace(/\/+$/, "");
 
 const HomePage = () => {
   const [featuredProducts, setFeaturedProducts] = useState([]);
@@ -15,7 +18,7 @@ const HomePage = () => {
     const fetchFeaturedProducts = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/products/featured"
+          `${API_URL}/api/products/featured`
         );
 
         if (!response.ok) {

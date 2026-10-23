@@ -5,6 +5,9 @@ import { useNavigate } from "react-router-dom";
 import CartContext from "../UseContext/CartContext";
 import NavBar from "../ReUsables/NavBar";
 import "../styles/checkout.css";
+const API_URL = (
+  import.meta.env.VITE_API_URL || "http://localhost:5000"
+).replace(/\/+$/, "");
 
 const deliveryOptions = {
   carrefour: {
@@ -103,7 +106,7 @@ if (!phoneRegex.test(phone)) {
       console.log("Creating order:", orderData);
 
       const orderResponse = await fetch(
-        "http://localhost:5000/api/orders",
+        `${API_URL}/api/orders`,
         {
           method: "POST",
 
@@ -139,7 +142,7 @@ if (!phoneRegex.test(phone)) {
       // -----------------------------------------
 
       const mpesaResponse = await fetch(
-        "http://localhost:5000/api/mpesa/stkpush",
+        `${API_URL}/api/mpesa/stkpush`,
         {
           method: "POST",
 
