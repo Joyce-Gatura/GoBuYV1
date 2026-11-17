@@ -131,7 +131,7 @@ a.contact-value:hover {
   width: 100%;
   box-sizing: border-box;
   padding: 12px 14px;
-  font: inherit;
+  /* font: inherit; */
   color: var(--ct-ink);
   border: 1px solid var(--ct-line);
   /* border-radius: 8px; */

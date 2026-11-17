@@ -6,7 +6,7 @@ import Footer from "../ReUsables/Footer";
 const contactItems = [
   {
     icon: Mail,
-    bgColor: "#EA580C",
+    bgColor: "black",
     color: "white",
     title: "Our Email",
     value: "gatura@mail.com",
@@ -14,7 +14,7 @@ const contactItems = [
   },
   {
     icon: Phone,
-    bgColor: "#EA580C",
+    bgColor: "black",
     color: "white",
     title: "Phone",
     value: "+254 746 550 967",
@@ -22,7 +22,7 @@ const contactItems = [
   },
   {
     icon: MapPin,
-    bgColor: "#EA580C",
+    bgColor: "black",
     color: "white",
     title: "Visit Us",
     value: "Nyeri, Kenya, Bomas",
@@ -30,7 +30,7 @@ const contactItems = [
   },
     {
     icon: MapPin,
-    bgColor: "#EA580C",
+    bgColor: "black",
     color: "white",
     title: "Visit Us",
     value: "Nakuru, Kenya, around Equity",
